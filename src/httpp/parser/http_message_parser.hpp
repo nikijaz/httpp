@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <optional>
 #include <string>
+#include <string_view>
 #include <unordered_map>
 #include <utility>
 
@@ -41,7 +42,7 @@ class HttpMessageParser {
    protected:
     HttpMessageParser() = default;
 
-    static constexpr std::string CRLF = "\r\n";
+    static constexpr std::string_view CRLF = "\r\n";
     static constexpr size_t MAX_START_LINE_SIZE = 8192;
 
     /* Current state of the parser. */
